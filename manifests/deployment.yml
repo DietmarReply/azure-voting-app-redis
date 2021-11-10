@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "aksclusternortheurope001-9a28"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "aksclusternortheurope001-9a28"
+  template:
+    metadata:
+      labels:
+        app: "aksclusternortheurope001-9a28"
+    spec:
+      containers:
+        - name: "aksclusternortheurope001-9a28"
+          image: "acrdznortheurope.azurecr.io/aksclusternortheurope001"
+          ports:
+          - containerPort: 80
